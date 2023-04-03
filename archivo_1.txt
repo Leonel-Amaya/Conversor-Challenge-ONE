@@ -1,0 +1,18 @@
+Conversor Challenge
+Crear un conversor de divisas usando el lenguaje de programación Java.
+
+Requisitos:
+	- Convertir de la moneda de tu país a Dólar
+	- Convertir de la moneda de tu país  a Euros
+	- Convertir de la moneda de tu país  a Libras Esterlinas
+	- Convertir de la moneda de tu país  a Yen Japonés
+	- Convertir de la moneda de tu país  a Won sul-coreano
+
+También debe ser capaz de:
+	- Convertir de Dólar a la moneda de tu país
+        - Convertir de Euros a la moneda de tu país
+        - Convertir de Libras Esterlinas a la moneda de tu país
+        - Convertir de Yen Japonés a la moneda de tu país
+        - Convertir de Won sul-coreano a la moneda de tu país
+
+Agregar también otros tipos de conversores, puede ser temperatura, longitud, ect.
