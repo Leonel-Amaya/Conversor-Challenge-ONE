@@ -42,6 +42,11 @@ public class Bienvenida extends javax.swing.JFrame {
         });
 
         btnLong.setText("Longitud");
+        btnLong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLongActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
         jLabel1.setText("Eligie un conversor");
@@ -81,6 +86,12 @@ public class Bienvenida extends javax.swing.JFrame {
         divisa.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnDivisaActionPerformed
+
+    private void btnLongActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLongActionPerformed
+        Longitudes longitudes = new Longitudes();
+        longitudes.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnLongActionPerformed
 
     /**
      * @param args the command line arguments
