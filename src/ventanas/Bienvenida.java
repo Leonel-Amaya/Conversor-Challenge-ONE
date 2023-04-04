@@ -15,6 +15,7 @@ public class Bienvenida extends javax.swing.JFrame {
      */
     public Bienvenida() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -34,6 +35,11 @@ public class Bienvenida extends javax.swing.JFrame {
         setResizable(false);
 
         btnDivisa.setText("Divisas");
+        btnDivisa.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDivisaActionPerformed(evt);
+            }
+        });
 
         btnLong.setText("Longitud");
 
@@ -45,31 +51,36 @@ public class Bienvenida extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(139, 139, 139)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(btnLong)
-                            .addComponent(btnDivisa)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(97, 97, 97)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(97, Short.MAX_VALUE))
+                .addGap(97, 97, 97)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(60, 60, 60)
+                .addComponent(btnDivisa, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
+                .addComponent(btnLong)
+                .addGap(58, 58, 58))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(38, 38, 38)
                 .addComponent(jLabel1)
-                .addGap(81, 81, 81)
-                .addComponent(btnDivisa)
-                .addGap(31, 31, 31)
-                .addComponent(btnLong)
-                .addContainerGap(112, Short.MAX_VALUE))
+                .addGap(80, 80, 80)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnDivisa)
+                    .addComponent(btnLong))
+                .addContainerGap(167, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnDivisaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDivisaActionPerformed
+        Divisa divisa = new Divisa();
+        divisa.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_btnDivisaActionPerformed
 
     /**
      * @param args the command line arguments
