@@ -51,7 +51,7 @@ public class Divisa extends javax.swing.JFrame {
     private void initComponents() {
 
         cantidad = new javax.swing.JTextField();
-        iconDiv1 = new javax.swing.JLabel();
+        bandera1 = new javax.swing.JLabel();
         moneda1 = new javax.swing.JComboBox<>();
         iconDiv2 = new javax.swing.JLabel();
         moneda2 = new javax.swing.JComboBox<>();
@@ -62,7 +62,13 @@ public class Divisa extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        iconDiv1.setText("jLabel1");
+        bandera1.setText("jLabel1");
+
+        moneda1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moneda1ActionPerformed(evt);
+            }
+        });
 
         iconDiv2.setText("jLabel2");
 
@@ -90,7 +96,7 @@ public class Divisa extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGap(20, 20, 20)
-                .addComponent(iconDiv1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(33, 33, 33)
                 .addComponent(moneda1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -120,7 +126,7 @@ public class Divisa extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(iconDiv1)
+                            .addComponent(bandera1)
                             .addComponent(moneda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(moneda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(iconDiv2))
@@ -171,6 +177,10 @@ public class Divisa extends javax.swing.JFrame {
         resultado.append("Tiene " + monedaConvertida);
     }//GEN-LAST:event_convertirActionPerformed
 
+    private void moneda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moneda1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moneda1ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -207,9 +217,9 @@ public class Divisa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel bandera1;
     private javax.swing.JTextField cantidad;
     private javax.swing.JButton convertir;
-    private javax.swing.JLabel iconDiv1;
     private javax.swing.JLabel iconDiv2;
     private javax.swing.JButton jButton1;
     private javax.swing.JScrollPane jScrollPane1;

@@ -4,6 +4,9 @@
  */
 package ventanas;
 
+import javax.swing.JOptionPane;
+import logica.Longitud;
+
 /**
  *
  * @author Leonel Amaya
@@ -15,6 +18,21 @@ public class Longitudes extends javax.swing.JFrame {
      */
     public Longitudes() {
         initComponents();
+        initCombo1();
+        initCombo2();
+        this.setLocationRelativeTo(null);
+    }
+    
+    private void initCombo1(){
+        opcion1.addItem("Centimetros");
+        opcion1.addItem("Metros");
+        opcion1.addItem("Kilometros");
+    }
+    
+    private void initCombo2(){
+        opcion2.addItem("Centimetros");
+        opcion2.addItem("Metros");
+        opcion2.addItem("Kilometros");
     }
 
     /**
@@ -26,21 +44,120 @@ public class Longitudes extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        longit = new javax.swing.JTextField();
+        opcion2 = new javax.swing.JComboBox<>();
+        opcion1 = new javax.swing.JComboBox<>();
+        volver = new javax.swing.JButton();
+        calcular = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        resultado = new javax.swing.JTextArea();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        longit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                longitActionPerformed(evt);
+            }
+        });
+
+        volver.setText("Volver");
+        volver.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                volverActionPerformed(evt);
+            }
+        });
+
+        calcular.setText("Calcular");
+        calcular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                calcularActionPerformed(evt);
+            }
+        });
+
+        resultado.setColumns(20);
+        resultado.setRows(5);
+        jScrollPane1.setViewportView(resultado);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addComponent(opcion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(opcion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(64, 64, 64))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(longit, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(volver)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(calcular)))
+                .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(108, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(78, 78, 78))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(longit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(69, 69, 69)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(opcion2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(opcion1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 25, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(volver)
+                    .addComponent(calcular))
+                .addGap(15, 15, 15))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void longitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_longitActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_longitActionPerformed
+
+    private void volverActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_volverActionPerformed
+        Bienvenida inicio = new Bienvenida();
+        inicio.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_volverActionPerformed
+
+    private void calcularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_calcularActionPerformed
+        Longitud longitud = new Longitud();
+        
+        try {
+            double valor = Double.parseDouble(longit.getText());
+            longitud.setValor(valor);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Solo pueden ser valor númericos");
+        }
+        
+        String unidad1 = opcion1.getSelectedItem().toString();
+        String unidad2 = opcion2.getSelectedItem().toString();
+        
+        longitud.setUnidad1(unidad1);
+        longitud.setUnidad2(unidad2);
+        
+        double longConvertida = longitud.convertir();
+        
+        resultado.setText(" ");
+        resultado.append("" + longConvertida);
+    }//GEN-LAST:event_calcularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -78,5 +195,12 @@ public class Longitudes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton calcular;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextField longit;
+    private javax.swing.JComboBox<String> opcion1;
+    private javax.swing.JComboBox<String> opcion2;
+    private javax.swing.JTextArea resultado;
+    private javax.swing.JButton volver;
     // End of variables declaration//GEN-END:variables
 }
