@@ -4,6 +4,7 @@
  */
 package ventanas;
 
+import java.awt.Color;
 import javax.swing.JOptionPane;
 import logica.Operaciones;
 
@@ -50,6 +51,7 @@ public class Divisa extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
         cantidad = new javax.swing.JTextField();
         bandera1 = new javax.swing.JLabel();
         moneda1 = new javax.swing.JComboBox<>();
@@ -59,22 +61,58 @@ public class Divisa extends javax.swing.JFrame {
         resultado = new javax.swing.JTextArea();
         jButton1 = new javax.swing.JButton();
         convertir = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(255, 255, 255));
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        cantidad.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cantidad.setForeground(new java.awt.Color(204, 204, 204));
+        cantidad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cantidad.setText("Cantidad");
+        cantidad.setBorder(null);
+        cantidad.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                cantidadMousePressed(evt);
+            }
+        });
+        jPanel1.add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 128, 36));
 
         bandera1.setText("jLabel1");
+        jPanel1.add(bandera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 99, 37, -1));
 
+        moneda1.setBorder(null);
         moneda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 moneda1ActionPerformed(evt);
             }
         });
+        jPanel1.add(moneda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 97, 151, -1));
 
         iconDiv2.setText("jLabel2");
+        jPanel1.add(iconDiv2, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 99, 56, -1));
+
+        moneda2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                moneda2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(moneda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 96, 152, -1));
+
+        jScrollPane1.setBorder(null);
+        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
+        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         resultado.setColumns(20);
+        resultado.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
         resultado.setRows(5);
+        resultado.setBorder(null);
         jScrollPane1.setViewportView(resultado);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 240, 70));
 
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -82,6 +120,7 @@ public class Divisa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 297, -1, -1));
 
         convertir.setText("Convertir");
         convertir.addActionListener(new java.awt.event.ActionListener() {
@@ -89,59 +128,21 @@ public class Divisa extends javax.swing.JFrame {
                 convertirActionPerformed(evt);
             }
         });
+        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, -1, -1));
+
+        jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
+        jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 150, 10));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(bandera1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(33, 33, 33)
-                .addComponent(moneda1, javax.swing.GroupLayout.PREFERRED_SIZE, 151, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(moneda2, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(iconDiv2, javax.swing.GroupLayout.PREFERRED_SIZE, 56, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(15, 15, 15))
-            .addGroup(layout.createSequentialGroup()
-                .addGap(187, 187, 187)
-                .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, 71, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(244, Short.MAX_VALUE))
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jButton1)
-                .addGap(41, 41, 41)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(convertir)
-                .addGap(29, 29, 29))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(cantidad, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(68, 68, 68)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(bandera1)
-                            .addComponent(moneda1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(moneda2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(iconDiv2))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 57, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(22, 22, 22))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(30, 30, 30))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(convertir)
-                        .addGap(37, 37, 37))))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 337, Short.MAX_VALUE)
         );
 
         pack();
@@ -180,6 +181,15 @@ public class Divisa extends javax.swing.JFrame {
     private void moneda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moneda1ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_moneda1ActionPerformed
+
+    private void moneda2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moneda2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_moneda2ActionPerformed
+
+    private void cantidadMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cantidadMousePressed
+        cantidad.setText("");
+        cantidad.setForeground(Color.black);
+    }//GEN-LAST:event_cantidadMousePressed
 
     /**
      * @param args the command line arguments
@@ -222,7 +232,9 @@ public class Divisa extends javax.swing.JFrame {
     private javax.swing.JButton convertir;
     private javax.swing.JLabel iconDiv2;
     private javax.swing.JButton jButton1;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JComboBox<String> moneda1;
     private javax.swing.JComboBox<String> moneda2;
     private javax.swing.JTextArea resultado;
