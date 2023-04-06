@@ -4,6 +4,8 @@
  */
 package ventanas;
 
+import java.awt.Color;
+
 /**
  *
  * @author Leonel Amaya
@@ -27,15 +29,32 @@ public class Bienvenida extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnDivisa = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
         btnLong = new javax.swing.JButton();
+        btnDivisa = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setResizable(false);
 
-        btnDivisa.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        btnLong.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        btnLong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cinta-de-medida.png"))); // NOI18N
+        btnLong.setText("Longitud");
+        btnLong.setBorder(null);
+        btnLong.setBorderPainted(false);
+        btnLong.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLongActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnLong, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 140, 170, 75));
+
+        btnDivisa.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnDivisa.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/intercambiar2.png"))); // NOI18N
         btnDivisa.setText("Divisas");
         btnDivisa.setBorder(null);
@@ -46,44 +65,35 @@ public class Bienvenida extends javax.swing.JFrame {
                 btnDivisaActionPerformed(evt);
             }
         });
-
-        btnLong.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        btnLong.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/cinta-de-medida.png"))); // NOI18N
-        btnLong.setText("Longitud");
-        btnLong.setBorder(null);
-        btnLong.setBorderPainted(false);
-        btnLong.setFocusPainted(false);
-        btnLong.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnLongActionPerformed(evt);
-            }
-        });
+        jPanel1.add(btnDivisa, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 140, 170, 72));
 
         jLabel1.setFont(new java.awt.Font("Segoe UI Black", 1, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(204, 255, 255));
         jLabel1.setText("Eligie un conversor");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 250, -1));
+
+        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/caliente.png"))); // NOI18N
+        jButton1.setText("Temperatura");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 240, 190, -1));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/img_fondo.jpg"))); // NOI18N
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -4, 440, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(97, 97, 97)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnDivisa, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnLong, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(97, 97, 97))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(31, 31, 31)
-                .addComponent(jLabel1)
-                .addGap(79, 79, 79)
-                .addComponent(btnDivisa, javax.swing.GroupLayout.PREFERRED_SIZE, 72, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnLong, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(31, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
         pack();
@@ -100,6 +110,12 @@ public class Bienvenida extends javax.swing.JFrame {
         longitudes.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_btnLongActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Temperatura temperatura = new Temperatura();
+        temperatura.setVisible(true);
+        this.setVisible(false);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -139,6 +155,9 @@ public class Bienvenida extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnDivisa;
     private javax.swing.JButton btnLong;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }
