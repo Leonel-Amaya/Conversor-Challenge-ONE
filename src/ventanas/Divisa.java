@@ -25,21 +25,21 @@ public class Divisa extends javax.swing.JFrame {
     }
     
     private void initCombo1() {
-        moneda1.addItem("Pesos Colombianos");
-        moneda1.addItem("Dólar");
-        moneda1.addItem("Libras Esterlinas");
-        moneda1.addItem("Euros");
-        moneda1.addItem("Yen Japonés");
-        moneda1.addItem("Won Sul-coreano");
+        moneda1.addItem("COP");
+        moneda1.addItem("USD");
+        moneda1.addItem("GBP");
+        moneda1.addItem("EUR");
+        moneda1.addItem("JPY");
+        moneda1.addItem("KRW");
     }
     
     private void initCombo2() {
-        moneda2.addItem("Pesos Colombianos");
-        moneda2.addItem("Dólar");
-        moneda2.addItem("Libras Esterlinas");
-        moneda2.addItem("Euros");
-        moneda2.addItem("Yen Japonés");
-        moneda2.addItem("Won Sul-coreano");
+        moneda2.addItem("COP");
+        moneda2.addItem("USD");
+        moneda2.addItem("GBP");
+        moneda2.addItem("EUR");
+        moneda2.addItem("JPY");
+        moneda2.addItem("KRW");
     }
 
     /**
