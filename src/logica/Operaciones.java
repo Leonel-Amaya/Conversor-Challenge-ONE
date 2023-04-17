@@ -48,91 +48,91 @@ public class Operaciones {
     
     public double convertir() {
         switch(divisa1){
-            case "Pesos Colombianos":
-                if(divisa2.equals("Dólar")){
+            case "COP":
+                if(divisa2.equals("USD")){
                     resultado = Math.round((valor / 4750.23)*100.0)/100.0;
-                } else if (divisa2.equals("Libras Esterlinas")){
+                } else if (divisa2.equals("GBP")){
                     resultado = Math.round((valor / 5808.11)*100.0)/100.0;
-                } else if (divisa2.equals("Euros")){
+                } else if (divisa2.equals("EUR")){
                     resultado = Math.round((valor / 5121.94)*100.0)/100.0;
-                } else if (divisa2.equals("Yen Japonés")){
+                } else if (divisa2.equals("JPY")){
                     resultado = Math.round((valor / 36.33)*100.0)/100.0;
-                } else if (divisa2.equals("Won Sul-coreano")){
+                } else if (divisa2.equals("KRW")){
                     resultado = Math.round((valor / 3.67)*100.0)/100.0;
                 } else {
                     resultado = valor;
                 }
                 break;
-            case "Dólar":
-                if(divisa2.equals("Pesos Colombianos")){
+            case "USD":
+                if(divisa2.equals("COP")){
                     resultado = Math.round((valor * 4750.23)*100.0)/100.0;
-                } else if (divisa2.equals("Libras Esterlinas")){
+                } else if (divisa2.equals("GBP")){
                     resultado = Math.round((valor * 0.82)*100.0)/100.0;
-                } else if (divisa2.equals("Euros")){
+                } else if (divisa2.equals("EUR")){
                     resultado = Math.round((valor * 0.93)*100.0)/100.0;
-                } else if (divisa2.equals("Yen Japonés")){
+                } else if (divisa2.equals("JPY")){
                     resultado = Math.round((valor * 130.75)*100.0)/100.0;
-                } else if (divisa2.equals("Won Sul-coreano")){
+                } else if (divisa2.equals("KRW")){
                     resultado = Math.round((valor * 1295.83)*100.0)/100.0;
                 } else {
                     resultado = valor;
                 }
                 break;
-            case "Libras Esterlinas":
-                if(divisa2.equals("Pesos Colombianos")){
+            case "GBP":
+                if(divisa2.equals("COP")){
                     resultado = Math.round((valor * 5746.14)*100.0)/100.0;
-                } else if (divisa2.equals("Dólar")){
+                } else if (divisa2.equals("USD")){
                     resultado = Math.round((valor * 1.23)*100.0)/100.0;
-                } else if (divisa2.equals("Euros")){
+                } else if (divisa2.equals("EUR")){
                     resultado = Math.round((valor * 1.14)*100.0)/100.0;
-                } else if (divisa2.equals("Yen Japonés")){
+                } else if (divisa2.equals("JPY")){
                     resultado = Math.round((valor * 163.91)*100.0)/100.0;
-                } else if (divisa2.equals("Won Sul-coreano")){
+                } else if (divisa2.equals("KRW")){
                     resultado = Math.round((valor * 1612.84)*100.0)/100.0;
                 } else {
                     resultado = valor;
                 }
                 break;
-            case "Euros":
-                if(divisa2.equals("Pesos Colombianos")){
+            case "EUR":
+                if(divisa2.equals("COP")){
                     resultado = Math.round((valor * 5059.82)*100.0)/100.0;
-                } else if (divisa2.equals("Libras Esterlinas")){
+                } else if (divisa2.equals("GBP")){
                     resultado = Math.round((valor * 0.88)*100.0)/100.0;
-                } else if (divisa2.equals("Dólar")){
+                } else if (divisa2.equals("USD")){
                     resultado = Math.round((valor * 1.09)*100.0)/100.0;
-                } else if (divisa2.equals("Yen Japonés")){
+                } else if (divisa2.equals("JPY")){
                     resultado = Math.round((valor * 144.34)*100.0)/100.0;
-                } else if (divisa2.equals("Won Sul-coreano")){
+                } else if (divisa2.equals("KRW")){
                     resultado = Math.round((valor * 1420.20)*100.0)/100.0;
                 } else {
                     resultado = valor;
                 }
                 break;
-            case "Yen Japonés":
-                if(divisa2.equals("Pesos Colombianos")){
+            case "JPY":
+                if(divisa2.equals("COP")){
                     resultado = Math.round((valor * 35.06)*100.0)/100.0;
-                } else if (divisa2.equals("Libras Esterlinas")){
+                } else if (divisa2.equals("GBP")){
                     resultado = Math.round((valor * 0.0061)*100.0)/100.0;
-                } else if (divisa2.equals("Dólar")){
+                } else if (divisa2.equals("USD")){
                     resultado = Math.round((valor * 0.0075)*100.0)/100.0;
-                } else if (divisa2.equals("Euros")){
+                } else if (divisa2.equals("EUR")){
                     resultado = Math.round((valor * 0.0069)*100.0)/100.0;
-                } else if (divisa2.equals("Won Sul-coreano")){
+                } else if (divisa2.equals("KRW")){
                     resultado = Math.round((valor * 9.84)*100.0)/100.0;
                 } else {
                     resultado = valor;
                 }
                 break;
-            case "Won Sul-coreano":
-                if(divisa2.equals("Pesos Colombianos")){
+            case "KRW":
+                if(divisa2.equals("COP")){
                     resultado = Math.round((valor * 3.56)*100.0)/100.0;
-                } else if (divisa2.equals("Libras Esterlinas")){
+                } else if (divisa2.equals("GBP")){
                     resultado = Math.round((valor * 0.00062)*100.0)/100.0;
-                } else if (divisa2.equals("Dólar")){
+                } else if (divisa2.equals("USD")){
                     resultado = Math.round((valor * 0.00077)*100.0)/100.0;
-                } else if (divisa2.equals("Euros")){
+                } else if (divisa2.equals("EUR")){
                     resultado = Math.round((valor * 0.00070)*100.0)/100.0;
-                } else if (divisa2.equals("Yen Japonés")){
+                } else if (divisa2.equals("JPY")){
                     resultado = Math.round((valor * 0.10)*100.0)/100.0;
                 } else {
                     resultado = valor;
