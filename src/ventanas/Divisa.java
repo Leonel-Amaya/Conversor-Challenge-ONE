@@ -61,6 +61,9 @@ public class Divisa extends javax.swing.JFrame {
         convertir = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -78,7 +81,7 @@ public class Divisa extends javax.swing.JFrame {
                 cantidadMousePressed(evt);
             }
         });
-        jPanel1.add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 128, 36));
+        jPanel1.add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 128, 36));
 
         moneda1.setBorder(null);
         moneda1.addActionListener(new java.awt.event.ActionListener() {
@@ -86,7 +89,7 @@ public class Divisa extends javax.swing.JFrame {
                 moneda1ActionPerformed(evt);
             }
         });
-        jPanel1.add(moneda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 97, 151, -1));
+        jPanel1.add(moneda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 100, 151, -1));
 
         moneda2.setBorder(null);
         moneda2.addActionListener(new java.awt.event.ActionListener() {
@@ -94,7 +97,7 @@ public class Divisa extends javax.swing.JFrame {
                 moneda2ActionPerformed(evt);
             }
         });
-        jPanel1.add(moneda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(254, 96, 152, -1));
+        jPanel1.add(moneda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 100, 152, -1));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -106,7 +109,7 @@ public class Divisa extends javax.swing.JFrame {
         resultado.setBorder(null);
         jScrollPane1.setViewportView(resultado);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 240, 70));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 240, 70));
 
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -114,7 +117,7 @@ public class Divisa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(7, 297, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 350, -1, -1));
 
         convertir.setText("Convertir");
         convertir.addActionListener(new java.awt.event.ActionListener() {
@@ -122,38 +125,59 @@ public class Divisa extends javax.swing.JFrame {
                 convertirActionPerformed(evt);
             }
         });
-        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 290, -1, -1));
+        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 320, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 50, 150, 10));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 150, 10));
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/reino-unido.png"))); // NOI18N
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/colombia.png"))); // NOI18N
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/union-europea.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 170, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(15, 15, 15)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addContainerGap(101, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 340, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(53, 53, 53)
+                .addComponent(jLabel1)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addGap(28, 28, 28)
+                .addComponent(jLabel3)
+                .addContainerGap(89, Short.MAX_VALUE))
         );
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 0, 170, 340));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 180, 380));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 701, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 382, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         pack();
@@ -241,6 +265,9 @@ public class Divisa extends javax.swing.JFrame {
     private javax.swing.JTextField cantidad;
     private javax.swing.JButton convertir;
     private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
