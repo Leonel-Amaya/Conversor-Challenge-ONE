@@ -53,9 +53,7 @@ public class Divisa extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         cantidad = new javax.swing.JTextField();
-        bandera1 = new javax.swing.JLabel();
         moneda1 = new javax.swing.JComboBox<>();
-        iconDiv2 = new javax.swing.JLabel();
         moneda2 = new javax.swing.JComboBox<>();
         jScrollPane1 = new javax.swing.JScrollPane();
         resultado = new javax.swing.JTextArea();
@@ -82,9 +80,6 @@ public class Divisa extends javax.swing.JFrame {
         });
         jPanel1.add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 10, 128, 36));
 
-        bandera1.setText("jLabel1");
-        jPanel1.add(bandera1, new org.netbeans.lib.awtextra.AbsoluteConstraints(21, 99, 37, -1));
-
         moneda1.setBorder(null);
         moneda1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,9 +87,6 @@ public class Divisa extends javax.swing.JFrame {
             }
         });
         jPanel1.add(moneda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(91, 97, 151, -1));
-
-        iconDiv2.setText("jLabel2");
-        jPanel1.add(iconDiv2, new org.netbeans.lib.awtextra.AbsoluteConstraints(468, 99, 56, -1));
 
         moneda2.setBorder(null);
         moneda2.addActionListener(new java.awt.event.ActionListener() {
@@ -246,10 +238,8 @@ public class Divisa extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel bandera1;
     private javax.swing.JTextField cantidad;
     private javax.swing.JButton convertir;
-    private javax.swing.JLabel iconDiv2;
     private javax.swing.JButton jButton1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
