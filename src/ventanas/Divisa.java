@@ -3,7 +3,6 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package ventanas;
-
 import java.awt.Color;
 import javax.swing.JOptionPane;
 import logica.Operaciones;
@@ -90,7 +89,7 @@ public class Divisa extends javax.swing.JFrame {
                 cantidadMousePressed(evt);
             }
         });
-        jPanel1.add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 10, 128, 36));
+        jPanel1.add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 128, 36));
 
         moneda1.setBorder(null);
         moneda1.addActionListener(new java.awt.event.ActionListener() {
@@ -98,7 +97,7 @@ public class Divisa extends javax.swing.JFrame {
                 moneda1ActionPerformed(evt);
             }
         });
-        jPanel1.add(moneda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 100, 151, -1));
+        jPanel1.add(moneda1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 140, 151, -1));
 
         moneda2.setBorder(null);
         moneda2.addActionListener(new java.awt.event.ActionListener() {
@@ -106,7 +105,7 @@ public class Divisa extends javax.swing.JFrame {
                 moneda2ActionPerformed(evt);
             }
         });
-        jPanel1.add(moneda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 100, 152, -1));
+        jPanel1.add(moneda2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, 152, -1));
 
         jScrollPane1.setBorder(null);
         jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -118,7 +117,7 @@ public class Divisa extends javax.swing.JFrame {
         resultado.setBorder(null);
         jScrollPane1.setViewportView(resultado);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 230, 240, 70));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 240, 70));
 
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -126,7 +125,7 @@ public class Divisa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 360, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, -1, -1));
 
         convertir.setText("Convertir");
         convertir.addActionListener(new java.awt.event.ActionListener() {
@@ -134,11 +133,11 @@ public class Divisa extends javax.swing.JFrame {
                 convertirActionPerformed(evt);
             }
         });
-        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 320, -1, -1));
+        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 50, 150, 10));
+        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 80, 150, 10));
 
         jPanel2.setBackground(new java.awt.Color(204, 255, 255));
 
@@ -226,9 +225,7 @@ public class Divisa extends javax.swing.JFrame {
                         .addComponent(jLabel8)
                         .addGap(25, 25, 25)))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel3))
+                    .addComponent(jLabel3)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(31, 31, 31)
                         .addComponent(jLabel9)))
@@ -254,7 +251,7 @@ public class Divisa extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(30, 30, 30)
                         .addComponent(jLabel12)))
-                .addContainerGap(90, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 240, 510));
