@@ -133,7 +133,7 @@ public class Divisa extends javax.swing.JFrame {
                 convertirActionPerformed(evt);
             }
         });
-        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 210, -1, -1));
+        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
