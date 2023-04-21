@@ -112,12 +112,12 @@ public class Divisa extends javax.swing.JFrame {
         jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
 
         resultado.setColumns(20);
-        resultado.setFont(new java.awt.Font("Segoe UI Symbol", 1, 14)); // NOI18N
+        resultado.setFont(new java.awt.Font("Segoe UI Symbol", 1, 20)); // NOI18N
         resultado.setRows(5);
         resultado.setBorder(null);
         jScrollPane1.setViewportView(resultado);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 270, 240, 70));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 310, 240, 70));
 
         jButton1.setText("Volver");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -125,15 +125,16 @@ public class Divisa extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 390, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 390, -1, -1));
 
+        convertir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         convertir.setText("Convertir");
         convertir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 convertirActionPerformed(evt);
             }
         });
-        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 210, -1, -1));
+        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 230, 100, 30));
 
         jSeparator1.setBackground(new java.awt.Color(0, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(0, 0, 0));
@@ -299,7 +300,7 @@ public class Divisa extends javax.swing.JFrame {
         double monedaConvertida = operaciones.convertir();
         
         resultado.setText(" ");
-        resultado.append("Tiene " + monedaConvertida);
+        resultado.append("Tiene " + monedaConvertida + " " + operaciones.getDivisa2());
     }//GEN-LAST:event_convertirActionPerformed
 
     private void moneda1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_moneda1ActionPerformed

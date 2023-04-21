@@ -50,7 +50,7 @@ public class Operaciones {
         switch(divisa1){
             case "COP":
                 if(divisa2.equals("USD")){
-                    resultado = Math.round((valor / 4750.23)*100.0)/100.0;
+                    resultado = Math.round((valor / 4750.23)*10000.0)/10000.0;
                 } else if (divisa2.equals("GBP")){
                     resultado = Math.round((valor / 5808.11)*100.0)/100.0;
                 } else if (divisa2.equals("EUR")){
