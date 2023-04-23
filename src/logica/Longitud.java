@@ -60,7 +60,7 @@ public class Longitud {
                     resultado = valor;
                 }
                 break;
-            case "kilometros":
+            case "Kilometros":
                 if(unidad2.equals("Metros")){
                     resultado = valor * 1000;
                 } else if (unidad2.equals("Centimetros")){
