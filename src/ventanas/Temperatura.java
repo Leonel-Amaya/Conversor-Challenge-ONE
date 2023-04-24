@@ -4,6 +4,9 @@
  */
 package ventanas;
 
+import javax.swing.JOptionPane;
+import logica.Temperaturas;
+
 /**
  *
  * @author Leonel Amaya
@@ -17,12 +20,19 @@ public class Temperatura extends javax.swing.JFrame {
         initComponents();
         this.setLocationRelativeTo(null);
         initCombo1();
+        initCombo2();
     }
     
     private void initCombo1(){
         opcionTemp.addItem("Celsius");
         opcionTemp.addItem("Kelvin");
         opcionTemp.addItem("Fahrenheit");
+    }
+    
+    private void initCombo2(){
+        opcionTemp2.addItem("Celsius");
+        opcionTemp2.addItem("Kelvin");
+        opcionTemp2.addItem("Fahrenheit");
     }
 
     /**
@@ -35,19 +45,14 @@ public class Temperatura extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
+        cantidad = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
         opcionTemp = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        resul1 = new javax.swing.JTextArea();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        resul2 = new javax.swing.JTextArea();
+        opcionTemp2 = new javax.swing.JComboBox<>();
         jScrollPane3 = new javax.swing.JScrollPane();
         resul3 = new javax.swing.JTextArea();
+        convertir = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -55,10 +60,10 @@ public class Temperatura extends javax.swing.JFrame {
 
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextField1.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        jTextField1.setBorder(null);
-        jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 160, 40));
+        cantidad.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        cantidad.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        cantidad.setBorder(null);
+        jPanel1.add(cantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 20, 160, 40));
 
         jSeparator1.setBackground(new java.awt.Color(255, 0, 0));
         jSeparator1.setForeground(new java.awt.Color(255, 0, 51));
@@ -79,41 +84,8 @@ public class Temperatura extends javax.swing.JFrame {
         });
         jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 340, 80, 30));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel2.setText("Celsius");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, 70, 50));
-
-        jScrollPane1.setBorder(null);
-        jScrollPane1.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane1.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        jScrollPane1.setOpaque(true);
-
-        resul1.setColumns(20);
-        resul1.setRows(5);
-        resul1.setOpaque(true);
-        jScrollPane1.setViewportView(resul1);
-
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 180, 140, 50));
-
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel3.setText("Kelvin");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 180, 70, 40));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jLabel4.setText("Fahrenheit");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 280, -1, -1));
-
-        jScrollPane2.setBorder(null);
-        jScrollPane2.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
-        jScrollPane2.setVerticalScrollBarPolicy(javax.swing.ScrollPaneConstants.VERTICAL_SCROLLBAR_NEVER);
-        jScrollPane2.setOpaque(true);
-
-        resul2.setColumns(20);
-        resul2.setRows(5);
-        resul2.setOpaque(true);
-        jScrollPane2.setViewportView(resul2);
-
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 180, 140, 50));
+        opcionTemp2.setBorder(null);
+        jPanel1.add(opcionTemp2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 20, 140, 40));
 
         jScrollPane3.setBorder(null);
         jScrollPane3.setHorizontalScrollBarPolicy(javax.swing.ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
@@ -121,11 +93,24 @@ public class Temperatura extends javax.swing.JFrame {
         jScrollPane3.setOpaque(true);
 
         resul3.setColumns(20);
+        resul3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         resul3.setRows(5);
         resul3.setOpaque(true);
         jScrollPane3.setViewportView(resul3);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 270, 140, 50));
+        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 190, 70));
+
+        convertir.setBackground(new java.awt.Color(227, 141, 116));
+        convertir.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        convertir.setForeground(new java.awt.Color(255, 255, 255));
+        convertir.setText("Convertir");
+        convertir.setBorder(null);
+        convertir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                convertirActionPerformed(evt);
+            }
+        });
+        jPanel1.add(convertir, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 340, 100, 30));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/calido.jpg"))); // NOI18N
         jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 610, 400));
@@ -153,6 +138,29 @@ public class Temperatura extends javax.swing.JFrame {
         inicio.setVisible(true);
         this.setVisible(false);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void convertirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_convertirActionPerformed
+        Temperaturas temperaturas = new Temperaturas();
+        
+        try {
+            double valor = Double.parseDouble(cantidad.getText());
+            temperaturas.setTemperatura(valor);
+        } catch (Exception e) {
+            e.printStackTrace();
+            JOptionPane.showMessageDialog(null, "Solo pueden ser valor númericos");
+        }
+        
+        String temperatura1 = opcionTemp.getSelectedItem().toString();
+        String temperatura2 = opcionTemp2.getSelectedItem().toString();
+        
+        temperaturas.setTemp1(temperatura1);
+        temperaturas.setTemp2(temperatura2);
+        
+        double temperaturaConvertida = temperaturas.Transformar();
+        
+        resul3.setText("");
+        resul3.append(temperaturaConvertida + " " + temperaturas.getTemp2());
+    }//GEN-LAST:event_convertirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -190,20 +198,15 @@ public class Temperatura extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField cantidad;
+    private javax.swing.JButton convertir;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JComboBox<String> opcionTemp;
-    private javax.swing.JTextArea resul1;
-    private javax.swing.JTextArea resul2;
+    private javax.swing.JComboBox<String> opcionTemp2;
     private javax.swing.JTextArea resul3;
     // End of variables declaration//GEN-END:variables
 }

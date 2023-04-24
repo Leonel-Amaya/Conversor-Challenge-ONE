@@ -36,7 +36,7 @@ public class Temperaturas {
     
     public double Transformar(){
         switch (temp1) {
-            case "Celcius":
+            case "Celsius":
                 if(temp2.equals("Kelvin")){
                     resultado = temperatura + 273.15;
                 } else if (temp2.equals("Fahrenheit")){
