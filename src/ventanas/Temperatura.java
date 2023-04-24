@@ -16,6 +16,13 @@ public class Temperatura extends javax.swing.JFrame {
     public Temperatura() {
         initComponents();
         this.setLocationRelativeTo(null);
+        initCombo1();
+    }
+    
+    private void initCombo1(){
+        opcionTemp.addItem("Celsius");
+        opcionTemp.addItem("Kelvin");
+        opcionTemp.addItem("Fahrenheit");
     }
 
     /**
@@ -30,7 +37,7 @@ public class Temperatura extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jTextField1 = new javax.swing.JTextField();
         jSeparator1 = new javax.swing.JSeparator();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        opcionTemp = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -57,9 +64,8 @@ public class Temperatura extends javax.swing.JFrame {
         jSeparator1.setForeground(new java.awt.Color(255, 0, 51));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 70, 180, 20));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(null);
-        jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 140, 40));
+        opcionTemp.setBorder(null);
+        jPanel1.add(opcionTemp, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 140, 40));
 
         jButton1.setBackground(new java.awt.Color(55, 75, 92));
         jButton1.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -185,7 +191,6 @@ public class Temperatura extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -196,6 +201,7 @@ public class Temperatura extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JComboBox<String> opcionTemp;
     private javax.swing.JTextArea resul1;
     private javax.swing.JTextArea resul2;
     private javax.swing.JTextArea resul3;
