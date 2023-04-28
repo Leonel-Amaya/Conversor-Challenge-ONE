@@ -18,6 +18,7 @@ public class Bienvenida extends javax.swing.JFrame {
     public Bienvenida() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Inicio");
     }
 
     /**
@@ -81,7 +82,7 @@ public class Bienvenida extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 190, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 190, -1));
 
         jButton2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/informacion.png"))); // NOI18N
@@ -92,7 +93,7 @@ public class Bienvenida extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 320, 170, 70));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 320, 170, 70));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imgs/img_fondo.jpg"))); // NOI18N
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(-2, -4, 440, -1));

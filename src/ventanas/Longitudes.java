@@ -18,9 +18,10 @@ public class Longitudes extends javax.swing.JFrame {
      */
     public Longitudes() {
         initComponents();
+        this.setLocationRelativeTo(null);
+        this.setTitle("Conversor Longitudes");
         initCombo1();
         initCombo2();
-        this.setLocationRelativeTo(null);
     }
     
     private void initCombo1(){

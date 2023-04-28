@@ -19,6 +19,7 @@ public class Temperatura extends javax.swing.JFrame {
     public Temperatura() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Conversor Temperaturas");
         initCombo1();
         initCombo2();
     }

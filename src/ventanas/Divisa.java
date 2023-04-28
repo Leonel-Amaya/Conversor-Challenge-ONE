@@ -19,6 +19,7 @@ public class Divisa extends javax.swing.JFrame {
     public Divisa() {
         initComponents();
         this.setLocationRelativeTo(null);
+        this.setTitle("Conversor Divisas");
         initCombo1();
         initCombo2();
     }
