@@ -47,18 +47,18 @@ public class Temperaturas {
                 break;
             case "Kelvin":
                 if(temp2.equals("Celsius")){
-                    resultado = temperatura - 273.15;
+                    resultado = (temperatura - 273.15)*10/10;
                 } else if (temp2.equals("Fahrenheit")){
-                    resultado = (temperatura - 273.15)*(9/5) + 32;
+                    resultado = ((temperatura - 273.15)*9/5 + 32)*10/10;
                 } else {
                     resultado = temperatura;
                 }
                 break;
             case "Fahrenheit":
                 if (temp2.equals("Celsius")){
-                    resultado = (temperatura - 32)* (5/9);
+                    resultado = (temperatura - 32)* 5/9;
                 } else if (temp2.equals("Kelvin")){
-                    resultado = (temperatura - 32)*(5/9) + 273.15;
+                    resultado = (temperatura - 32)*5/9 + 273.15;
                 } else {
                     resultado = temperatura;
                 }
