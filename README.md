@@ -24,9 +24,9 @@ El convertidor debe cumplir con los siguientes requerimientos:
 - Convertir de Won sul-coreano a la moneda de tu país
 
 ### Extras
-Se nos animó 
+Se nos animó a implementar funcionalidades extras que se nos pudiesen ocurrir el hacer volar nuestra imaginación y asumir el resto de desarrollar esas demás funcionalidades
 
-## Funcionalidad Realizada
+## Funcionalidad realizada
 Se desarrolló la funcionalidad pedida del conversor de divisas, y adicionalmente a este se implementó las funciones de convertir longitudes y temperaturas, además de una sección acerca de  mí
 
 ![conversor1](https://user-images.githubusercontent.com/119468148/235969395-45aa79c2-78ae-427d-8b3e-3d4bd297f7bd.png)
