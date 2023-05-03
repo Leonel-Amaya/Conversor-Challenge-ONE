@@ -38,27 +38,28 @@ public class Temperaturas {
         switch (temp1) {
             case "Celsius":
                 if(temp2.equals("Kelvin")){
-                    resultado = temperatura + 273.15;
+                    resultado = Math.round((temperatura + 273.15)*100.0)/100.0;
                 } else if (temp2.equals("Fahrenheit")){
-                    resultado = (temperatura * 9/5) + 32;
+                    resultado = Math.round(((temperatura * 9/5) + 32)*100.0)/100.0;
                 } else {
                     resultado = temperatura;
                 }
                 break;
             case "Kelvin":
                 if(temp2.equals("Celsius")){
-                    resultado = (temperatura - 273.15)*10/10;
+                    resultado = Math.round((temperatura - 273.15)*100.0)/100.0;
                 } else if (temp2.equals("Fahrenheit")){
-                    resultado = ((temperatura - 273.15)*9/5 + 32)*10/10;
+                    resultado = Math.round(((temperatura - 273.15)*9/5 + 32)*100.0)/100.0;
                 } else {
                     resultado = temperatura;
                 }
                 break;
             case "Fahrenheit":
                 if (temp2.equals("Celsius")){
-                    resultado = (temperatura - 32)* 5/9;
+                    //resultado = ((temperatura - 32)*5/9)*10.0/10.0;
+                    resultado = Math.round(((temperatura - 32)*5/9)*100.0)/100.0;
                 } else if (temp2.equals("Kelvin")){
-                    resultado = (temperatura - 32)*5/9 + 273.15;
+                    resultado = Math.round(((temperatura - 32) * 5/9 + 273.15)*100.0)/100.0;
                 } else {
                     resultado = temperatura;
                 }
