@@ -2,7 +2,7 @@
 ## Índice:
 * [Descripción del proyecto](#descripción-del-proyecto)
 * [Funcionalidades pedidas](#funcionalidades-pedidas)
-* [Funcionalidad realizada](funcionalidad-realizada)
+* [Funcionalidad realizada](#funcionalidad-realizada)
 
 ## Descripción del proyecto
 Este proyecto hace parte de la formación Java de Oracle Next Education (ONE) la cual es una alianza entre **Alura Latam** y **Oracle**. Hago parte de la especialización en Desarrollo Backend
